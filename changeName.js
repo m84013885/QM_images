@@ -26,8 +26,15 @@ fs.readdir(url, 'utf8', (err, fileList) => {
     sorTarr = _.orderBy(sorTarr, 'name');
     sorTarr.forEach((item, index) => {
         let oldName = item.name + item.type;
-        let newName = index + '.jpg';
-        fs.rename(url + oldName, url + newName, (err) => {
+        let temporary = 'new' + index + '.jpg';
+        fs.rename(url + oldName, url + temporary, (err) => {
+            if (err) throw err;
+        });
+    })
+    sorTarr.forEach((item,index)=>{
+        let temporary = 'new' + index + '.jpg';
+        let newName =  index + '.jpg';
+        fs.rename(url + temporary, url + newName, (err) => {
             if (err) throw err;
         });
     })
