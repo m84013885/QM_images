@@ -1,6 +1,6 @@
 
-// const name = 'line/';
-const name = 'my/';
+const name = 'line/';
+// const name = 'my/';
 // const name = 'paper/';
 const _ = require('lodash');
 const fs = require('fs');
