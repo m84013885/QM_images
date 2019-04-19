@@ -1,4 +1,5 @@
-const name = 'line/';
+// const name = 'line/';
+const name = 'hexo/';
 // const name = 'my/';
 // const name = 'paper/';
 
